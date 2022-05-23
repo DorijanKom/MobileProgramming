@@ -1,20 +1,18 @@
 package com.example.lively;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.lively.fragments.dashboard.DashboardFragment;
+import com.example.lively.fragments.exercise.ExerciseFragment;
+import com.example.lively.fragments.food.FoodFragment;
+import com.example.lively.fragments.ViewPageAdapter;
+import com.example.lively.fragments.sleep.SleepFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {

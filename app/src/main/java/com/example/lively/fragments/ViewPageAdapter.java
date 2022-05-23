@@ -1,4 +1,4 @@
-package com.example.lively;
+package com.example.lively.fragments;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
