@@ -1,4 +1,4 @@
-package com.example.lively;
+package com.example.lively.fragments.register;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,39 +14,38 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentLogin extends Fragment {
+import com.example.lively.R;
 
-    Button btnLogin, btnRegister;
-    EditText etUserName, etPassword;
-    String userName, pass;
+public class FragmentRegister extends Fragment {
 
+
+    Button btnRegister;
+    EditText etUserName, etPassword, etEmail;
+    String userName, email, pass;
 
     @Nullable
     @Override
-
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.login_fragment, container, false);
+        View view = inflater.inflate(R.layout.register_fragment, container, false);
         etUserName = view.findViewById(R.id.etUserName);
         etPassword = view.findViewById(R.id.etPassword);
-
-        btnLogin.findViewById(R.id.btnLogin);
+        etEmail = view.findViewById(R.id.etEmail);
         btnRegister.findViewById(R.id.btnRegister);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                userName = etUserName.getText().toString();
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+
+                userName =etUserName.getText().toString();
+                email = etEmail.getText().toString();
                 pass = etPassword.getText().toString();
 
-                Toast.makeText(getContext(), "Login", Toast.LENGTH_SHORT).show();
-
-
+                Toast.makeText(getContext(), "Registered", Toast.LENGTH_SHORT).show();
             }
         });
-            return view;
 
+
+        return view;
     }
-
 }
