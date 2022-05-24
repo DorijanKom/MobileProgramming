@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MobileProgramming/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1965" />
-        <entry key="..\:/MobileProgramming/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/activity_second.xml" value="0.33" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/login_fragment.xml" value="0.25" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/register_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
       </map>
     </option>
