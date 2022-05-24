@@ -6,6 +6,7 @@
     android:background="@color/white">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/sleep_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardElevation="10dp"
@@ -38,5 +39,24 @@
 
         </TextView>
 
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="45dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#4C5270"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slept for: "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
