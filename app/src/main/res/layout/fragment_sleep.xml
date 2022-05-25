@@ -13,10 +13,9 @@
         app:cardCornerRadius="50dp"
         android:backgroundTint="#4C5270"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="450dp"
-        android:layout_marginStart="120dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp">
 
         <ImageView
             android:layout_width="75dp"
@@ -42,21 +41,75 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/slept_for"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="45dp"
-        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#4C5270"
+        app:cardCornerRadius="20dp"
         android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Slept for: "
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        app:layout_constraintStart_toEndOf="@id/slept_for"
+        app:layout_constraintTop_toTopOf="@id/slept_for"
+        android:layout_marginStart="20dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/slepp_sess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/slept_for"
+        app:layout_constraintStart_toStartOf="@id/slept_for"
+        app:layout_constraintEnd_toEndOf="@id/slept_for"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#4C5270"
+        app:cardCornerRadius="20dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Slept for: "
+            android:text="Sleep in: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:padding="10dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avg_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/slepp_sess"
+        app:layout_constraintStart_toStartOf="@id/slepp_sess"
+        app:layout_constraintEnd_toEndOf="@id/slepp_sess"
+        android:backgroundTint="#4C5270"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average sleep: "
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textStyle="bold"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
