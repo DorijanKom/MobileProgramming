@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white">
+    android:background="@color/perri_bleach">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/exercise_card"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="50dp"
-        android:backgroundTint="#4C5270"
+        android:backgroundTint="#028174"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,21 +50,23 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="45dp"
         android:layout_marginBottom="50dp"
-        android:backgroundTint="#4C5270"
+        android:backgroundTint="#028174"
         app:cardCornerRadius="20dp"
         android:padding="20dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:text="Exercised for: "
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:padding="10dp"/>
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -80,7 +82,7 @@
         app:layout_constraintStart_toStartOf="@id/exercisedFor"
         app:layout_constraintEnd_toEndOf="@id/exercisedFor"
         android:layout_marginTop="25dp"
-        android:backgroundTint="#4C5270"
+        android:backgroundTint="#028174"
         app:cardCornerRadius="20dp">
 
         <TextView
@@ -112,6 +114,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="48dp"
+        android:foreground="?attr/selectableItemBackground"
         android:layout_marginBottom="178dp"
         android:text="Schedule next exercise"
         android:background="@drawable/rectangle_shape"
@@ -122,14 +125,14 @@
         app:layout_constraintTop_toBottomOf="@+id/nextExercise" />
 
 
-
     <EditText
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:inputType="time"
-        app:layout_constraintStart_toEndOf="@id/nextExercise"
-        app:layout_constraintTop_toTopOf="@id/nextExercise" />
+        app:layout_constraintBottom_toBottomOf="@+id/nextExercise"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText" />
+
 
 
 
