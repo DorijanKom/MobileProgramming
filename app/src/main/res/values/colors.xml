@@ -8,7 +8,15 @@
     <color name= "green">#4CAF50</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="cornflower">#4C5270</color>
+    <color name="perri_dark_lilac">#9A9CE9</color>
+    <color name="perri_light_lilac">#A1B9ED</color>
+    <color name="perri_light_green">#92DE8B</color>
+    <color name="perri_bleach">#ADEEE0</color>
+    <color name="kiwi_darg_green">#028174</color>
+    <color name="kiwi_medium_green">#0AB68B</color>
+    <color name="kiwi_light_green">#92DE8B</color>
+    <color name="kiwi_skin">#FFE3B3</color>
 
 </resources>
 
