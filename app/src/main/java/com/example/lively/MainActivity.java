@@ -2,6 +2,7 @@ package com.example.lively;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -25,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         fragmentContainerView = findViewById(R.id.frag_container_view);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container_view, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container_view,
+                new HomeFragment()).commit();
 
     }
 
