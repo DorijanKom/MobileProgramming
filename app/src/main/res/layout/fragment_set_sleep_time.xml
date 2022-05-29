@@ -2,28 +2,46 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/perri_bleach">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/set_sleep_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:cardElevation="20dp"
-        app:cardCornerRadius="50dp"
         android:backgroundTint="@color/perri_dark_lilac">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set sleep time"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:orientation="vertical">
 
+        <TimePicker
+            android:id="@+id/sleep_time_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:layout_marginTop="25dp"
+            android:background="@color/perri_light_lilac"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set sleep time"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:padding="10dp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/perri_light_green"/>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
