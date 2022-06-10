@@ -9,6 +9,7 @@ public class Sleep {
     private long id;
     private int sleptFor;
     private int sleepIn;
+
     private Double avgSleep;
 
     public Sleep(int sleptFor) {
@@ -40,6 +41,7 @@ public class Sleep {
     public void setSleepIn(int sleepIn) {
         this.sleepIn = sleepIn;
     }
+
 
     public Double getAvgSleep() {
         return avgSleep;
