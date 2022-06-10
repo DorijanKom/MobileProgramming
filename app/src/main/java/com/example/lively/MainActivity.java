@@ -21,6 +21,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     FragmentContainerView fragmentContainerView;
+    public long userID=4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

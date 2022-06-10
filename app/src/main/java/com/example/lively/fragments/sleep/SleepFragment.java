@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.lively.MainActivity;
 import com.example.lively.R;
 
 public class SleepFragment extends Fragment {
@@ -20,6 +21,7 @@ public class SleepFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sleep, container, false);
         Button set_sleep = view.findViewById(R.id.set_sleep_button);
+        long userID = ((MainActivity) getActivity()).userID;
         set_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
