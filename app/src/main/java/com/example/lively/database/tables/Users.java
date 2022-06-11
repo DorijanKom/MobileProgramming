@@ -3,13 +3,9 @@ package com.example.lively.database.tables;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-enum Gender{
-    MALE,
-    FEMALE
-}
 @Entity(tableName = "users")
-public class Users {
-    private Gender gender;
+public class Users{
+    private String gender;
     @PrimaryKey(autoGenerate = true)
     private long Userid;
     private Double height;
@@ -19,7 +15,7 @@ public class Users {
     private int eatenCalories;
     private int neededCalories;
 
-    public Users(Gender gender, Double height, Double weight, int age) {
+    public Users(String gender, Double height, Double weight, int age) {
         this.gender = gender;
         this.height = height;
         this.weight = weight;
@@ -27,19 +23,19 @@ public class Users {
         this.eatenCalories=0;
     }
 
-    public long getId() {
+    public long getUserid() {
         return Userid;
     }
 
-    public void setId(long id) {
-        this.Userid = id;
+    public void setUserid(long userid) {
+        Userid = userid;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -63,8 +59,8 @@ public class Users {
         return calcBMI(this.height,this.weight);
     }
 
-    public void setBmi(Double bmi) throws Exception {
-        throw new Exception("You can't set the bmi");
+    public void setBmi(Double bmi){
+        this.bmi=bmi;
     }
 
     public int getEatenCalories() {
@@ -79,8 +75,8 @@ public class Users {
         return calcCalories(this.weight,this.height,this.age,this.gender);
     }
 
-    public void setNeededCalories(int neededCalories) throws Exception {
-        throw new Exception("You can't set your calories manually!");
+    public void setNeededCalories(int neededCalories){
+        this.neededCalories = neededCalories;
     }
 
     public int getAge() {
@@ -99,13 +95,13 @@ public class Users {
         return bmi;
     }
 
-    private int calcCalories(Double weight, Double height, int age, Gender gender){
+    private int calcCalories(Double weight, Double height, int age, String gender){
         int calories;
         switch (gender){
-            case MALE:
+            case "MALE":
                 calories = (int)(10*weight + 6.25*height - 5*age + 5);
                 break;
-            case FEMALE:
+            case "FEMALE":
                 calories = (int)(10*weight + 6.25*height - 5*age + 161);
                 break;
             default:

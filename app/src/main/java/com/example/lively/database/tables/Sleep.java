@@ -12,12 +12,12 @@ public class Sleep {
     private int sleepIn;
     private Double avgSleep;
 
-    public long getId() {
+    public long getSleepID() {
         return SleepID;
     }
 
-    public void setId(long id) {
-        this.SleepID = id;
+    public void setSleepID(long sleepID) {
+        SleepID = sleepID;
     }
 
     public int getSleptFor() {

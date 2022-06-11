@@ -10,12 +10,12 @@ public class Food {
     private int nextMeal;
     private int waterInterval;
 
-    public long getId() {
+    public long getFoodID() {
         return FoodID;
     }
 
-    public void setId(long id) {
-        this.FoodID = id;
+    public void setFoodID(long foodID) {
+        FoodID = foodID;
     }
 
     public int getNextMeal() {

@@ -11,12 +11,12 @@ public class Exercise {
     private int nextExercise;
     private Double avgExercise;
 
-    public long getId() {
+    public long getExerciseID() {
         return exerciseID;
     }
 
-    public void setId(long id) {
-        this.exerciseID = id;
+    public void setExerciseID(long exerciseID) {
+        this.exerciseID = exerciseID;
     }
 
     public int getExerciseTime() {

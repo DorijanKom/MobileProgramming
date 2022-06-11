@@ -82,8 +82,8 @@
         android:id="@+id/calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/nextMeal"
-        app:layout_constraintStart_toStartOf="@+id/nextMeal"
+        app:layout_constraintTop_toBottomOf="@id/nextMeal"
+        app:layout_constraintStart_toStartOf="@id/nextMeal"
         android:layout_marginTop="25dp"
         android:backgroundTint="#9A9CE9"
         app:cardCornerRadius="20dp">
@@ -106,10 +106,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/calories"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintBottom_toBottomOf="@id/calories"
+        app:layout_constraintEnd_toEndOf="@id/editText2"
+        app:layout_constraintStart_toStartOf="@id/editText2"
+        app:layout_constraintTop_toBottomOf="@id/editText2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.cardview.widget.CardView
@@ -119,9 +119,9 @@
         android:layout_marginTop="25dp"
         android:backgroundTint="#9A9CE9"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="id/calories"
-        app:layout_constraintStart_toStartOf="@+id/calories"
-        app:layout_constraintTop_toBottomOf="@+id/calories">
+        app:layout_constraintEnd_toEndOf="@id/calories"
+        app:layout_constraintStart_toStartOf="@id/calories"
+        app:layout_constraintTop_toBottomOf="@id/calories">
 
         <TextView
             android:layout_width="match_parent"
@@ -140,10 +140,10 @@
         android:layout_height="wrap_content"
         android:inputType="time"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/water"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toTopOf="@+id/water"
+        app:layout_constraintBottom_toBottomOf="@id/water"
+        app:layout_constraintEnd_toEndOf="@id/editText3"
+        app:layout_constraintStart_toStartOf="@id/editText3"
+        app:layout_constraintTop_toTopOf="@id/water"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button

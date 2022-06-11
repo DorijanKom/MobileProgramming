@@ -17,12 +17,12 @@ public class Accounts {
         this.password = password;
     }
 
-    public long getId() {
+    public long getAccountID() {
         return AccountID;
     }
 
-    public void setId(long id) {
-        this.AccountID = id;
+    public void setAccountID(long accountID) {
+        AccountID = accountID;
     }
 
     public String getUserName() {
