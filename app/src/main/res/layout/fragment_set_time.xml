@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/set_sleep_card"
+        android:id="@+id/set_time_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
         <TimePicker
-            android:id="@+id/sleep_time_clock"
+            android:id="@+id/frag_time_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:timePickerMode="spinner"
@@ -27,10 +27,10 @@
             android:background="@color/perri_light_lilac"/>
 
         <TextView
-            android:id="@+id/set_sleep_card_button"
+            android:id="@+id/set_time_card_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Set sleep time"
+            android:text="Set time"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="15sp"

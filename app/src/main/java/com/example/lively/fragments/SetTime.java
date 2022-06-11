@@ -1,4 +1,4 @@
-package com.example.lively.fragments.sleep;
+package com.example.lively.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import androidx.fragment.app.DialogFragment;
 
 import com.example.lively.R;
 
-public class SetSleepTime extends DialogFragment {
+public class SetTime extends DialogFragment {
 
     private static final String TAG = "SetSleepTime";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_set_sleep_time,container,false);
+        View view = inflater.inflate(R.layout.fragment_set_time,container,false);
 
-        TimePicker timePicker = view.findViewById(R.id.sleep_time_clock);
-        TextView textView = view.findViewById(R.id.set_sleep_card_button);
+        TimePicker timePicker = view.findViewById(R.id.frag_time_clock);
+        TextView textView = view.findViewById(R.id.set_time_card_button);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

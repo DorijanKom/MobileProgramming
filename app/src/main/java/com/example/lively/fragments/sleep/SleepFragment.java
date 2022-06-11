@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lively.MainActivity;
 import com.example.lively.R;
+import com.example.lively.fragments.SetTime;
 
 public class SleepFragment extends Fragment {
 
@@ -29,7 +30,7 @@ public class SleepFragment extends Fragment {
         set_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SetSleepTime setSleepTime = new SetSleepTime();
+                SetTime setSleepTime = new SetTime();
                 setSleepTime.show(getChildFragmentManager(), "SetSleepTime");
             }
         });
