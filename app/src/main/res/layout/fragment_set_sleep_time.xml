@@ -27,6 +27,7 @@
             android:background="@color/perri_light_lilac"/>
 
         <TextView
+            android:id="@+id/set_sleep_card_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Set sleep time"
