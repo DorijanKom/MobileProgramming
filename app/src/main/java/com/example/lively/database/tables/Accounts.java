@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "accounts")
 public class Accounts {
     @PrimaryKey(autoGenerate = true)
-    private long id;
+    private long AccountID;
     private String userName;
     private String email;
     private String password;
@@ -18,11 +18,11 @@ public class Accounts {
     }
 
     public long getId() {
-        return id;
+        return AccountID;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.AccountID = id;
     }
 
     public String getUserName() {

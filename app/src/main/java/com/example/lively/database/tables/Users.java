@@ -11,7 +11,7 @@ enum Gender{
 public class Users {
     private Gender gender;
     @PrimaryKey(autoGenerate = true)
-    private long id;
+    private long Userid;
     private Double height;
     private Double weight;
     private int age;
@@ -28,11 +28,19 @@ public class Users {
     }
 
     public long getId() {
-        return id;
+        return Userid;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.Userid = id;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public Double getHeight() {

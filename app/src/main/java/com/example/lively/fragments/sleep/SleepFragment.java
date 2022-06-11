@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lively.MainActivity;
 import com.example.lively.R;
+import com.example.lively.database.LivelyDatabase;
+import com.example.lively.database.tables.Sleep;
 
 public class SleepFragment extends Fragment {
 
@@ -22,6 +25,10 @@ public class SleepFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sleep, container, false);
         Button set_sleep = view.findViewById(R.id.set_sleep_button);
         long userID = ((MainActivity) getActivity()).userID;
+        EditText sleptFor = view.findViewById(R.id.sleep_for_info);
+
+
+
         set_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +36,15 @@ public class SleepFragment extends Fragment {
                 setSleepTime.show(getChildFragmentManager(), "SetSleepTime");
             }
         });
+
+        sleptFor.setOnClickListener(new View.OnClickListener() {
+            Sleep sleep;
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         return view;
     }
 

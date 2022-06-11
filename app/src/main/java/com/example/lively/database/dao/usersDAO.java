@@ -1,5 +1,6 @@
 package com.example.lively.database.dao;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -9,11 +10,12 @@ import com.example.lively.database.tables.Users;
 
 import java.util.List;
 
+@Dao
 public interface usersDAO {
     @Query("SELECT * FROM users")
-    public List<Users> getAllUserss();
+    public List<Users> getAllUsers();
 
-    @Query("SELECT * FROM users WHERE id=:id")
+    @Query("SELECT * FROM users WHERE Userid=:id")
     public Users getUsersBYID(long id);
 
     @Insert()

@@ -6,28 +6,30 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "sleep")
 public class Sleep {
     @PrimaryKey(autoGenerate = true)
-    private long id;
+    private long SleepID;
     private int sleptFor;
+    private int setSleeptime;
     private int sleepIn;
-
     private Double avgSleep;
 
-    public Sleep(int sleptFor) {
-        this.sleptFor = sleptFor;
-        this.sleepIn = 0;
-        this.avgSleep = 0.0;
-    }
-
     public long getId() {
-        return id;
+        return SleepID;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.SleepID = id;
     }
 
     public int getSleptFor() {
         return sleptFor;
+    }
+
+    public int getSetSleeptime() {
+        return setSleeptime;
+    }
+
+    public void setSetSleeptime(int setSleeptime) {
+        this.setSleeptime = setSleeptime;
     }
 
     public void setSleptFor(int sleptFor) {
