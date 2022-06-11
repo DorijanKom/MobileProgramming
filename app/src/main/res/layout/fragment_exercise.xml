@@ -1,24 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/perri_bleach">
 
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exercise_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exercised for:  "
-        android:textSize="30dp"
+        app:cardCornerRadius="50dp"
+        android:backgroundTint="#028174"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:src="@drawable/ic_baseline_directions_run_24">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Exercise"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exercisedFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#028174"
+        android:padding="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:text="Exercised for: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:inputType="time"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exercisedFor"
+        app:layout_constraintStart_toEndOf="@id/exercisedFor"
+        app:layout_constraintTop_toTopOf="@id/exercisedFor"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nextExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/exercisedFor"
+        app:layout_constraintStart_toStartOf="@id/exercisedFor"
+        app:layout_constraintEnd_toEndOf="@id/exercisedFor"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#028174"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Next Exercise : "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="178dp"
+        android:background="@drawable/rectangle_shape"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Schedule next exercise"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"
-        android:background="#00BCD4"
-        android:textColor="@color/white"
-        android:padding="20dp">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/nextExercise" />
 
+    <TextView
+        android:id="@+id/exerciseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/nextExercise"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/nextExercise" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
