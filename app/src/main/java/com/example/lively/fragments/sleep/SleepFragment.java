@@ -1,6 +1,5 @@
 package com.example.lively.fragments.sleep;
 
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lively.MainActivity;
 import com.example.lively.R;
-import com.example.lively.database.LivelyDatabase;
-import com.example.lively.database.tables.Sleep;
 
 public class SleepFragment extends Fragment {
 
@@ -38,7 +35,6 @@ public class SleepFragment extends Fragment {
         });
 
         sleptFor.setOnClickListener(new View.OnClickListener() {
-            Sleep sleep;
             @Override
             public void onClick(View view) {
 

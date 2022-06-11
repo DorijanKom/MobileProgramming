@@ -15,6 +15,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_set_sleep_time.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sleep.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_userdata.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/layout/register_fragment.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />

@@ -14,6 +14,15 @@ public class Users{
     private Double bmi;
     private int eatenCalories;
     private int neededCalories;
+    private int nextMeal;
+    private int waterInterval;
+    private int exerciseTime;
+    private int nextExercise;
+    private Double avgExercise;
+    private int sleptFor;
+    private int setSleeptime;
+    private int sleepIn;
+    private Double avgSleep;
 
     public Users(String gender, Double height, Double weight, int age) {
         this.gender = gender;
@@ -21,6 +30,17 @@ public class Users{
         this.weight = weight;
         this.age = age;
         this.eatenCalories=0;
+        this.bmi=0.0;
+        this.eatenCalories=0;
+        this.nextMeal=0;
+        this.waterInterval=0;
+        this.exerciseTime=0;
+        this.nextExercise=0;
+        this.avgExercise=0.0;
+        this.sleptFor=0;
+        this.setSleeptime=0;
+        this.sleepIn=0;
+        this.avgSleep=0.0;
     }
 
     public long getUserid() {
@@ -87,6 +107,77 @@ public class Users{
         this.age = age;
     }
 
+    public int getNextMeal() {
+        return nextMeal;
+    }
+
+    public void setNextMeal(int nextMeal) {
+        this.nextMeal = nextMeal;
+    }
+
+    public int getWaterInterval() {
+        return waterInterval;
+    }
+
+    public void setWaterInterval(int waterInterval) {
+        this.waterInterval = waterInterval;
+    }
+
+    public int getExerciseTime() {
+        return exerciseTime;
+    }
+
+    public void setExerciseTime(int exerciseTime) {
+        this.exerciseTime = exerciseTime;
+    }
+
+    public int getNextExercise() {
+        return nextExercise;
+    }
+
+    public void setNextExercise(int nextExercise) {
+        this.nextExercise = nextExercise;
+    }
+
+    public Double getAvgExercise() {
+        return avgExercise;
+    }
+
+    public void setAvgExercise(Double avgExercise) {
+        this.avgExercise = avgExercise;
+    }
+
+    public int getSleptFor() {
+        return sleptFor;
+    }
+
+    public void setSleptFor(int sleptFor) {
+        this.sleptFor = sleptFor;
+    }
+
+    public int getSetSleeptime() {
+        return setSleeptime;
+    }
+
+    public void setSetSleeptime(int setSleeptime) {
+        this.setSleeptime = setSleeptime;
+    }
+
+    public int getSleepIn() {
+        return sleepIn;
+    }
+
+    public void setSleepIn(int sleepIn) {
+        this.sleepIn = sleepIn;
+    }
+
+    public Double getAvgSleep() {
+        return avgSleep;
+    }
+
+    public void setAvgSleep(Double avgSleep) {
+        this.avgSleep = avgSleep;
+    }
 
     private Double calcBMI(Double height, Double weight){
         height = getHeight();
