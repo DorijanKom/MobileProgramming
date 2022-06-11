@@ -10,7 +10,6 @@
         android:id="@+id/exercise_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardElevation="10dp"
         app:cardCornerRadius="50dp"
         android:backgroundTint="#028174"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,14 +44,14 @@
         android:id="@+id/exercisedFor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="45dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#028174"
+        android:padding="20dp"
         app:cardCornerRadius="20dp"
-        android:padding="20dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -72,6 +71,7 @@
         android:layout_marginStart="36dp"
         android:inputType="time"
         android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exercisedFor"
         app:layout_constraintStart_toEndOf="@id/exercisedFor"
         app:layout_constraintTop_toTopOf="@id/exercisedFor"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -115,19 +115,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nextExercise" />
 
-
-    <EditText
-        android:layout_width="100sp"
+    <TextView
+        android:id="@+id/exerciseView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="time"
-        android:minHeight="48dp"
+        android:textSize="25dp"
+        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/nextExercise"
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-
-
+        app:layout_constraintTop_toTopOf="@+id/nextExercise" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

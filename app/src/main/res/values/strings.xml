@@ -4,4 +4,13 @@
     <string name="exercise">Exercise</string>
     <string name="food">Food</string>
     <string name="sleep">Sleep</string>
+
+
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+
 </resources>
