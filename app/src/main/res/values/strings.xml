@@ -4,6 +4,14 @@
     <string name="exercise">Exercise</string>
     <string name="food">Food</string>
     <string name="sleep">Sleep</string>
+    <string name="sleep_for">Slept for: </string>
+    <string name="sleep_in">Sleep in: </string>
+    <string name="sleep_avg">Sleep in: </string>
+    <string name="set_sleep">Set sleep time</string>
+    <string name="sleep_hint">00:00</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
 
-
+    </string-array>
 </resources>
