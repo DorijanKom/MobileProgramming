@@ -23,7 +23,9 @@ import java.util.List;
 
 public class SleepFragment extends Fragment {
 
+    private SleepFragment sleepFragment=this;
     List<Users> usersList = new ArrayList<>();
+    TextView sleepIN;
 
     @Nullable
     @Override
@@ -31,7 +33,7 @@ public class SleepFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sleep, container, false);
         Button set_sleep = view.findViewById(R.id.set_sleep_button);
         EditText sleptFor = view.findViewById(R.id.sleep_for_info);
-        TextView sleepIN = view.findViewById(R.id.sleep_in_info);
+        sleepIN = view.findViewById(R.id.sleep_in_info);
         TextView avgSleep = view.findViewById(R.id.avg_sleep_info);
         Button saveButton = view.findViewById(R.id.save_slept_for);
 
@@ -41,7 +43,7 @@ public class SleepFragment extends Fragment {
         set_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SetTime setSleepTime = new SetTime("Sleep");
+                SetTime setSleepTime = new SetTime("Sleep",sleepFragment);
                 setSleepTime.show(getChildFragmentManager(), "SetSleepTime");
             }
         });
@@ -59,12 +61,22 @@ public class SleepFragment extends Fragment {
         return view;
     }
 
-  /*  public String returnSleepAverage(TextView sleepIn){
-        Users users = LivelyDatabase.getDatabase(getContext()).usersDAO().getUsersBYID();
-        String avgSleepString = sleepIn.toString();
-        String[] split = avgSleepString.split(":\\s");
-        int sleepAvg = Integer.parseInt(avgSleepString);
+    @Override
+    public void onResume() {
+        super.onResume();
 
-    }*/
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+    }
+
+    public void setSleepTime(int time){
+        int conHours = time/ 3600;
+        int conMinutes = (time % 3600) / 60;
+        sleepIN.setText(conHours + ":" + conMinutes);
+    }
 
 }
