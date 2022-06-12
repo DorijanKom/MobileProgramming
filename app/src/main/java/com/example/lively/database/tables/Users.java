@@ -5,27 +5,27 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "users")
 public class Users{
-    private String gender;
+    private String gender="";
     @PrimaryKey(autoGenerate = true)
     private long Userid;
-    private String userName;
-    private String email;
-    private String password;
-    private Double height;
-    private Double weight;
-    private int age;
-    private Double bmi;
-    private int eatenCalories;
-    private int neededCalories;
-    private int nextMeal;
-    private int waterInterval;
-    private int exerciseTime;
-    private int nextExercise;
-    private Double avgExercise;
-    private int sleptFor;
-    private int setSleeptime;
-    private int sleepIn;
-    private Double avgSleep;
+    private String userName="";
+    private String email="";
+    private String password="";
+    private Double height=0.0;
+    private Double weight=0.0;
+    private int age=0;
+    private Double bmi=0.0;
+    private int eatenCalories=0;
+    private int neededCalories=0;
+    private int nextMeal=0;
+    private int waterInterval=0;
+    private int exerciseTime=0;
+    private int nextExercise=0;
+    private Double avgExercise=0.0;
+    private int sleptFor=0;
+    private int setSleeptime=0;
+    private int sleepIn=0;
+    private Double avgSleep=0.0;
 
     public Users(String gender, Double height, Double weight, int age) {
         this.gender = gender;
@@ -53,6 +53,18 @@ public class Users{
         this.userName=userName;
         this.email=email;
         this.password=password;
+        this.eatenCalories=0;
+        this.bmi=0.0;
+        this.eatenCalories=0;
+        this.nextMeal=0;
+        this.waterInterval=0;
+        this.exerciseTime=0;
+        this.nextExercise=0;
+        this.avgExercise=0.0;
+        this.sleptFor=0;
+        this.setSleeptime=0;
+        this.sleepIn=0;
+        this.avgSleep=0.0;
     }
 
     public long getUserid() {
@@ -216,8 +228,6 @@ public class Users{
     }
 
     private Double calcBMI(Double height, Double weight){
-        height = getHeight();
-        weight = getWeight();
         Double bmi = weight / (height*height);
         return bmi;
     }

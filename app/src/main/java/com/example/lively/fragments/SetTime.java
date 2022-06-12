@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
@@ -19,6 +20,15 @@ import com.example.lively.database.tables.Users;
 public class SetTime extends DialogFragment {
 
     private static final String TAG = "SetSleepTime";
+    private String fromPage;
+
+    public SetTime(){
+
+    }
+
+    public SetTime(String fromPage){
+        this.fromPage=fromPage;
+    }
 
     @Nullable
     @Override
@@ -31,16 +41,19 @@ public class SetTime extends DialogFragment {
         textView.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View view) {
-                String sleepForEntered = timePicker.toString();
-                String[] split = sleepForEntered.split(":\\s");
+                int hour = timePicker.getCurrentHour();
+                int minute = timePicker.getCurrentMinute();
 
-                    int time = (Integer.parseInt(split[0])*3600+Integer.parseInt(split[1])*60);
-                    Users user;
-                    switch (view.getId()){
-                        case R.layout.fragment_sleep:
-
+                    int time = (hour*3600+minute*60);
+                    Users users = ((MainActivity)getActivity()).user;
+                    switch (fromPage){
+                        case "Sleep":
+                            users.setSetSleeptime(time);
+                            LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(users);
                             break;
-                        case R.layout.fragment_food:
+                        case "Food":
+                            users.setNextMeal(time);
+                            LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(users);
                             break;
                         default:
                             break;
