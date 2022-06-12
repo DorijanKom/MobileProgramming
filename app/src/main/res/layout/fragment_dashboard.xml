@@ -97,12 +97,13 @@
         app:layout_constraintTop_toTopOf="@+id/nextMealCard">
 
         <TextView
-            android:id="@+id/sleepTime"
+            android:id="@+id/bmi"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_gravity="center"
             android:layout_margin="50dp"
-            android:text="00:00"
+            android:text="25.0"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp">
 
@@ -113,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:text="Average Sleep"
+            android:text="BMI"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold">
