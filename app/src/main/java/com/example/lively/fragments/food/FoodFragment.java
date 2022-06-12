@@ -38,9 +38,9 @@ public class FoodFragment extends Fragment {
         currentBMI = view.findViewById(R.id.bmi_text);
         waterText = view.findViewById(R.id.water_text);
 
-        nextMeal.setText(((MainActivity) getActivity()).user.getNextMeal());
+        //nextMeal.setText(((MainActivity) getActivity()).user.getNextMeal());
         currentBMI.setText(((MainActivity) getActivity()).user.getBmi().toString());
-        waterText.setText(((MainActivity) getActivity()).user.getWaterInterval());
+        //waterText.setText(((MainActivity) getActivity()).user.getWaterInterval());
 
 
         mealTime.setOnClickListener(new View.OnClickListener() {
