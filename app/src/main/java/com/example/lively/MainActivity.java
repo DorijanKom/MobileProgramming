@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     FragmentContainerView fragmentContainerView;
     public Users user = new Users("Dorijan","dorijan.komsic@gmail.com","12345");
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

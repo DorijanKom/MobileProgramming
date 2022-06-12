@@ -30,7 +30,6 @@ public class SleepFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sleep, container, false);
         Button set_sleep = view.findViewById(R.id.set_sleep_button);
-        long userID = ((MainActivity) getActivity()).userID;
         EditText sleptFor = view.findViewById(R.id.sleep_for_info);
         TextView sleepIN = view.findViewById(R.id.sleep_in_info);
         TextView avgSleep = view.findViewById(R.id.avg_sleep_info);
