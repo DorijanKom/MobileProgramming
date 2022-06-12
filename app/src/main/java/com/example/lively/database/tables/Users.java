@@ -8,6 +8,9 @@ public class Users{
     private String gender;
     @PrimaryKey(autoGenerate = true)
     private long Userid;
+    private String userName;
+    private String email;
+    private String password;
     private Double height;
     private Double weight;
     private int age;
@@ -41,6 +44,15 @@ public class Users{
         this.setSleeptime=0;
         this.sleepIn=0;
         this.avgSleep=0.0;
+    }
+    public Users(){
+
+    }
+
+    public Users(String userName, String email,String password){
+        this.userName=userName;
+        this.email=email;
+        this.password=password;
     }
 
     public long getUserid() {
@@ -177,6 +189,30 @@ public class Users{
 
     public void setAvgSleep(Double avgSleep) {
         this.avgSleep = avgSleep;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     private Double calcBMI(Double height, Double weight){
