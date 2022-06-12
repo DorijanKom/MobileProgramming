@@ -82,4 +82,3 @@ public class FragmentRegister extends Fragment {
         return view;
     }
 }
-}
