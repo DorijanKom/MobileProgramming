@@ -64,6 +64,7 @@ public class FragmentLogin extends Fragment {
                     Users users = usersDao.login(username, password);
                     if (users == null) {
                         Toast.makeText(getContext(), "Invalid password or username!", Toast.LENGTH_SHORT).show();
+                        btnLogin.setEnabled(false);
                     } else {
                         getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new DashboardFragment()).commit();
                     }
