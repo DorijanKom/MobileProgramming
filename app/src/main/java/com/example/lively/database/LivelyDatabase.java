@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-
 import com.example.lively.database.dao.usersDAO;
 import com.example.lively.database.tables.Users;
 
