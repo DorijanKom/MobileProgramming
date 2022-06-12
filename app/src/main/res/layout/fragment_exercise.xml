@@ -65,7 +65,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/exercisedFor_text"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -113,18 +113,32 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nextExercise" />
+        app:layout_constraintTop_toBottomOf="@+id/nextExercise"/>
 
     <TextView
-        android:id="@+id/exerciseView"
+        android:id="@+id/nextExercise_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="@string/sleep_hint"
+        android:textSize="20sp"
+        android:text="MM/DD/YYYY"
         app:layout_constraintBottom_toBottomOf="@+id/nextExercise"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="@+id/nextExercise" />
+        app:layout_constraintEnd_toEndOf="@+id/exercisedFor_text"
+        app:layout_constraintStart_toStartOf="@+id/exercisedFor_text"
+        app:layout_constraintTop_toTopOf="@+id/nextExercise"/>
+
+    <Button
+        android:id="@+id/btnGym"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/button_background"
+        android:text="Show Nearby Gyms"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSchedule"
+        app:layout_constraintStart_toStartOf="@+id/btnSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

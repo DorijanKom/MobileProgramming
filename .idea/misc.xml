@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_dashboard.xml" value="0.3625" />
-        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_exercise.xml" value="0.1762917933130699" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_exercise.xml" value="0.33" />
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_home.xml" value="0.1762917933130699" />
-        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_sleep.xml" value="0.18697916666666667" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_set_schedule.xml" value="0.3625" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_set_time.xml" value="0.3625" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_sleep.xml" value="0.33" />
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_userdata.xml" value="0.33" />
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/login_fragment.xml" value="0.33" />
         <entry key="..\:/MobileProgramming/app/src/main/res/layout/register_fragment.xml" value="0.33" />
