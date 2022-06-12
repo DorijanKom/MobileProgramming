@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
@@ -50,15 +51,13 @@ public class FragmentRegister extends Fragment {
 
 
                 if (username.isEmpty() && password.isEmpty()) {
-                    btnRegister.setEnabled(false);
                     Toast.makeText(getContext(), "Fill in the required fields!", Toast.LENGTH_SHORT).show();
                 } else {
                     Users users = new Users(etUserName.getText().toString(), etPassword.getText().toString(), email = etEmail.getText().toString());
                     LivelyDatabase.getDatabase(getContext()).usersDAO().addUsers(users);
                     Toast.makeText(getContext(), "Registered", Toast.LENGTH_SHORT).show();
+                    ((MainActivity) getActivity()).user = users;
 
-
-                    getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new UserDataFragment(users)).commit();
 
                 }
             }
@@ -82,4 +81,5 @@ public class FragmentRegister extends Fragment {
 
         return view;
     }
+}
 }
