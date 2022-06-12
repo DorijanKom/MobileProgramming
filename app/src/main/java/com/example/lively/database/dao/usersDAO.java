@@ -26,4 +26,10 @@ public interface usersDAO {
 
     @Delete
     public void deleteUsers(Users users);
+
+    @Query("UPDATE users SET sleepIn=:sleepin WHERE Userid=:id")
+    public void updateSleepTimer(int sleepin, long id);
+
+    @Query("SELECT * FROM users WHERE userName=:name AND password=:password")
+    public Users login(String name, String password);
 }

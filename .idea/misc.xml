@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_exercise.xml" value="0.1762917933130699" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/fragment_userdata.xml" value="0.33" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/login_fragment.xml" value="0.33" />
+        <entry key="..\:/MobileProgramming/app/src/main/res/layout/register_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.3145" />
         <entry key="app/src/main/res/drawable/ic_baseline_bed_24.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_baseline_directions_run_24.xml" value="0.3145" />

@@ -34,6 +34,7 @@
     </androidx.cardview.widget.CardView>
 
     <Spinner
+        android:id="@+id/select_gender"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginEnd="120dp"
@@ -71,13 +72,14 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
+        android:id="@+id/height_text"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="120dp"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/height_field"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/height_field"
-        android:inputType="number">
+        app:layout_constraintTop_toTopOf="@+id/height_field">
 
     </EditText>
 
@@ -109,13 +111,14 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
+        android:id="@+id/weight_text"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="120dp"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/weight_field"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/weight_field"
-        android:inputType="number">
+        app:layout_constraintTop_toTopOf="@+id/weight_field">
 
     </EditText>
 
@@ -148,18 +151,19 @@
 
 
     <EditText
+        android:id="@+id/age_text"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="120dp"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/age_field"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/age_field"
-        android:inputType="number">
+        app:layout_constraintTop_toTopOf="@+id/age_field">
 
     </EditText>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSaveUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"

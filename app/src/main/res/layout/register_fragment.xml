@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/perri_bleach"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -59,6 +60,15 @@
             android:textColor="#fff"
             android:background="@color/green"
             android:text="Register" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"
+            android:background="@color/green"
+            android:text="Login" />
 
 
     </LinearLayout>
