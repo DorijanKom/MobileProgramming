@@ -169,4 +169,15 @@
         android:layout_marginBottom="125dp">
     </Button>
 
+    <Button
+        android:id="@+id/save_slept_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/sleep_for_info"
+        app:layout_constraintBottom_toBottomOf="@id/sleep_for_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Save"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,8 +10,9 @@
         android:id="@+id/exercise_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cardElevation="20dp"
         app:cardCornerRadius="50dp"
-        android:backgroundTint="#028174"
+        android:backgroundTint="@color/perri_dark_lilac"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,13 +46,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#028174"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/perri_dark_lilac"
         android:padding="20dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/exercise_card">
 
         <TextView
             android:layout_width="match_parent"
@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="@id/exercisedFor"
         app:layout_constraintEnd_toEndOf="@id/exercisedFor"
         android:layout_marginTop="25dp"
-        android:backgroundTint="#028174"
+        android:backgroundTint="@color/perri_dark_lilac"
         app:cardCornerRadius="20dp">
 
         <TextView
@@ -105,8 +105,8 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="178dp"
-        android:background="@drawable/rectangle_shape"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/button_background"
         android:foreground="?attr/selectableItemBackground"
         android:text="Schedule next exercise"
         android:textColor="#fff"
@@ -119,8 +119,8 @@
         android:id="@+id/exerciseView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:text="TextView"
+        android:textSize="25sp"
+        android:text="@string/sleep_hint"
         app:layout_constraintBottom_toBottomOf="@+id/nextExercise"
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
