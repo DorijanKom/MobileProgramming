@@ -3,11 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lively">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <application
-        android:allowBackup="true"
+
+    android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lively"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAYf9lG-BJEZH8jlAdnX6EebHBEkm1n_DY" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

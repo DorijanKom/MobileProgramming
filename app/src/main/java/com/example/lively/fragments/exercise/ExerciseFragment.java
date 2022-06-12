@@ -14,10 +14,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.lively.MainActivity;
+import com.example.lively.MapScreen;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
 import com.example.lively.fragments.home.HomeFragment;
+import com.example.lively.fragments.login.FragmentLogin;
 import com.example.lively.fragments.schedule.ScheduleFragment;
 
 import java.text.SimpleDateFormat;
@@ -46,6 +48,15 @@ public class ExerciseFragment extends Fragment {
         nextExercise = view.findViewById(R.id.nextExercise_text);
 
         nextExercise.setText(new SimpleDateFormat("MM/dd/yyyy").format(new Date(((MainActivity) getActivity()).user.getNextExercise())));
+
+        find_gym.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new MapScreen()).commit();
+
+            }
+        });
 
         set_schedule.setOnClickListener(new View.OnClickListener() {
             @Override
