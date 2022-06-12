@@ -37,8 +37,18 @@ public class SleepFragment extends Fragment {
         TextView avgSleep = view.findViewById(R.id.avg_sleep_info);
         Button saveButton = view.findViewById(R.id.save_slept_for);
 
+        String sleptForString = sleptFor.getText().toString();
+        /*int intSleptFor = Integer.parseInt(sleptForString);
 
-        List<Users> usersList = LivelyDatabase.getDatabase(getContext()).usersDAO().getAllUsers();
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Users users=((MainActivity)getActivity()).user;
+                users.setSleptFor(intSleptFor);
+                LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(users);
+                sleptFor.setText(users.getSleptFor());
+            }
+        });*/
 
         set_sleep.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -27,7 +27,7 @@ public class Users{
     private int sleepIn=0;
     private Double avgSleep=0.0;
 
-    public Users(String gender, Double height, Double weight, int age) {
+    public Users(Double height, Double weight, int age) {
         this.gender = gender;
         this.height = height;
         this.weight = weight;
@@ -205,11 +205,10 @@ public class Users{
     }
 
     private Double calcBMI(Double height, Double weight){
-        Double bmi = weight / (height*height);
-        return bmi;
+        return weight / (height*height);
     }
 
-    private int calcCalories(Double weight, Double height, int age, String gender){
+    public int calcCalories(Double weight, Double height, int age, String gender){
         int calories;
         switch (gender){
             case "MALE":

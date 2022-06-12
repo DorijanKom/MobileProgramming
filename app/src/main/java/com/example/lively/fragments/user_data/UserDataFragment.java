@@ -5,6 +5,8 @@ import android.service.autofill.UserData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -14,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
@@ -22,7 +25,7 @@ import java.util.List;
 import java.util.WeakHashMap;
 
 
-public class UserDataFragment extends Fragment {
+public class UserDataFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private Users user;
     private Button saveButton;
@@ -37,7 +40,6 @@ public class UserDataFragment extends Fragment {
         this.user = user;
     }
 
-    private List<Users> usersList = LivelyDatabase.getDatabase(getContext()).usersDAO().getAllUsers();
 
     @Nullable
     @Override
@@ -48,29 +50,35 @@ public class UserDataFragment extends Fragment {
         height = view.findViewById(R.id.height_text);
         weight = view.findViewById(R.id.weight_text);
         age = view.findViewById(R.id.age_text);
-        gender = view.findViewById(R.id.select_gender);
+        //gender = view.findViewById(R.id.select_gender);
 
-        if (height.getText().toString().isEmpty() || weight.getText().toString().isEmpty() || age.getText().toString().isEmpty() || gender.getSelectedItem().toString().isEmpty()) {
-            Toast.makeText(getContext(), "Error!", Toast.LENGTH_LONG).show();
-            saveButton.setEnabled(false);
+      /*  ArrayAdapter<Spinner> adapter = ArrayAdapter.createFromResource(getContext(),R.array.gender_array, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        gender.setAdapter(adapter);
+        gender.setOnItemClickListener(this);*/
 
-        }else{
-            Toast.makeText(getContext(), "Saved!", Toast.LENGTH_LONG).show();
-            saveButton.setEnabled(true);
-
-        }
+        user.setAge(Integer.parseInt(age.getText().toString()));
+        user.setHeight(Double.parseDouble(height.getText().toString()));
+        user.setWeight(Double.parseDouble(weight.getText().toString()));
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setGender(gender.getSelectedItem().toString());
-                user.setAge(Integer.parseInt(age.getText().toString()));
-                user.setHeight(Double.parseDouble(height.getText().toString()));
-                user.setWeight(Double.parseDouble(weight.getText().toString()));
 
                 LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(user);
 
-                Toast.makeText(getContext(), "User updated!", Toast.LENGTH_LONG).show();
+                if (height.getText().toString().isEmpty() || weight.getText().toString().isEmpty()
+                        || age.getText().toString().isEmpty()
+                        || gender.getSelectedItem().toString().isEmpty()) {
+                    Toast.makeText(getContext(), "Error!", Toast.LENGTH_LONG).show();
+                    saveButton.setEnabled(false);
+
+                }else{
+                    Toast.makeText(getContext(), "Saved!", Toast.LENGTH_LONG).show();
+                    saveButton.setEnabled(true);
+
+
+                }
             }
         });
 
@@ -81,4 +89,18 @@ public class UserDataFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String text = adapterView.getItemAtPosition(i).toString();
+        if (text.equals("MALE")){
+            user.calcCalories(Double.parseDouble(weight.getText().toString()),Double.parseDouble(height.getText().toString()),Integer.parseInt(age.getText().toString()),"MALE");
+        }else{
+            user.calcCalories(Double.parseDouble(weight.getText().toString()),Double.parseDouble(height.getText().toString()),Integer.parseInt(age.getText().toString()),"FEMALE");
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }
