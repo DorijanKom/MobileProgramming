@@ -23,7 +23,7 @@ public class Users{
     private int nextExercise=0;
     private Double avgExercise=0.0;
     private int sleptFor=0;
-    private int setSleeptime=0;
+    private int setSleeptime=79200;
     private int sleepIn=0;
     private Double avgSleep=0.0;
 
@@ -32,18 +32,7 @@ public class Users{
         this.height = height;
         this.weight = weight;
         this.age = age;
-        this.eatenCalories=0;
-        this.bmi=0.0;
-        this.eatenCalories=0;
-        this.nextMeal=0;
-        this.waterInterval=0;
-        this.exerciseTime=0;
-        this.nextExercise=0;
-        this.avgExercise=0.0;
-        this.sleptFor=0;
-        this.setSleeptime=0;
-        this.sleepIn=0;
-        this.avgSleep=0.0;
+
     }
     public Users(){
 
@@ -53,18 +42,6 @@ public class Users{
         this.userName=userName;
         this.email=email;
         this.password=password;
-        this.eatenCalories=0;
-        this.bmi=0.0;
-        this.eatenCalories=0;
-        this.nextMeal=0;
-        this.waterInterval=0;
-        this.exerciseTime=0;
-        this.nextExercise=0;
-        this.avgExercise=0.0;
-        this.sleptFor=0;
-        this.setSleeptime=0;
-        this.sleepIn=0;
-        this.avgSleep=0.0;
     }
 
     public long getUserid() {

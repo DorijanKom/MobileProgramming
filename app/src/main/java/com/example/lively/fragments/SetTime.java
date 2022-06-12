@@ -1,6 +1,7 @@
 package com.example.lively.fragments;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,16 +12,19 @@ import android.widget.TimePicker;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
+import com.example.lively.fragments.sleep.SleepFragment;
 
 public class SetTime extends DialogFragment {
 
     private static final String TAG = "SetSleepTime";
     private String fromPage;
+    private SleepFragment fragment;
 
     public SetTime(){
 
@@ -29,6 +33,13 @@ public class SetTime extends DialogFragment {
     public SetTime(String fromPage){
         this.fromPage=fromPage;
     }
+
+    public SetTime(String fromPage, SleepFragment fragment){
+        this.fromPage = fromPage;
+        this.fragment = fragment;
+
+    }
+
 
     @Nullable
     @Override
@@ -40,7 +51,7 @@ public class SetTime extends DialogFragment {
 
         textView.setOnClickListener(new View.OnClickListener() {
            @Override
-            public void onClick(View view) {
+            public void onClick(View hewwo) {
                 int hour = timePicker.getCurrentHour();
                 int minute = timePicker.getCurrentMinute();
 
@@ -49,7 +60,9 @@ public class SetTime extends DialogFragment {
                     switch (fromPage){
                         case "Sleep":
                             users.setSetSleeptime(time);
+                            fragment.setSleepTime(time);
                             LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(users);
+
                             break;
                         case "Food":
                             users.setNextMeal(time);
@@ -58,8 +71,10 @@ public class SetTime extends DialogFragment {
                         default:
                             break;
                     }
+                    dismiss();
             }
         });
         return view;
     }
+
 }
