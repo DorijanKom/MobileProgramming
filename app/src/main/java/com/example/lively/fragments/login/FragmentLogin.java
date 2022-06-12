@@ -19,7 +19,10 @@ import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.dao.usersDAO;
 import com.example.lively.database.tables.Users;
 import com.example.lively.fragments.dashboard.DashboardFragment;
+import com.example.lively.fragments.home.HomeFragment;
 import com.example.lively.fragments.register.FragmentRegister;
+
+import java.util.List;
 
 
 public class FragmentLogin extends Fragment {
@@ -61,13 +64,12 @@ public class FragmentLogin extends Fragment {
                     Toast.makeText(getContext(), "Fill in the required fields!", Toast.LENGTH_SHORT).show();
                 } else {
                     LivelyDatabase livelyDatabase = LivelyDatabase.getDatabase(getContext());
-                    usersDAO usersDao = livelyDatabase.usersDAO();
-                    Users users = usersDao.login(username, password);
-                    if (users == null) {
-                        Toast.makeText(getContext(), "Invalid password or username!", Toast.LENGTH_SHORT).show();
-                    } else {
+                    Users users = livelyDatabase.usersDAO().login(username, password);
+                    if (users != null) {
                         ((MainActivity) getActivity()).user = users;
-                        getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new DashboardFragment()).commit();
+                        getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new HomeFragment()).commit();
+                    } else {
+                        Toast.makeText(getContext(), "Invalid password or username!", Toast.LENGTH_SHORT).show();
                     }
 
 
