@@ -18,6 +18,7 @@ import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.tables.Users;
+import com.example.lively.fragments.food.FoodFragment;
 import com.example.lively.fragments.sleep.SleepFragment;
 
 public class SetTime extends DialogFragment {
@@ -25,6 +26,7 @@ public class SetTime extends DialogFragment {
     private static final String TAG = "SetSleepTime";
     private String fromPage;
     private SleepFragment fragment;
+    private FoodFragment fragment2;
 
     public SetTime(){
 
@@ -37,6 +39,11 @@ public class SetTime extends DialogFragment {
     public SetTime(String fromPage, SleepFragment fragment){
         this.fromPage = fromPage;
         this.fragment = fragment;
+
+    }
+    public SetTime(String fromPage, FoodFragment fragment){
+        this.fromPage = fromPage;
+        this.fragment2 = fragment;
 
     }
 
@@ -66,6 +73,7 @@ public class SetTime extends DialogFragment {
                             break;
                         case "Food":
                             users.setNextMeal(time);
+                            fragment2.setNextMeal(time);
                             LivelyDatabase.getDatabase(getContext()).usersDAO().updateUsers(users);
                             break;
                         default:

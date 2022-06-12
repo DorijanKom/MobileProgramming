@@ -34,7 +34,7 @@
             android:text="Food"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginTop="50dp">
 
         </TextView>
@@ -67,7 +67,7 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/nextMeal_text"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:inputType="time"
@@ -82,17 +82,17 @@
         android:id="@+id/calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/nextMeal"
-        app:layout_constraintStart_toStartOf="@id/nextMeal"
         android:layout_marginTop="25dp"
         android:backgroundTint="#9A9CE9"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="@id/nextMeal"
+        app:layout_constraintTop_toBottomOf="@id/nextMeal">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Calorie intake: "
+            android:text="Current BMI: "
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -100,17 +100,19 @@
 
     </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/editText3"
+    <TextView
+        android:id="@+id/bmi_text"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:gravity="center"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@id/calories"
-        app:layout_constraintEnd_toEndOf="@id/editText2"
-        app:layout_constraintStart_toStartOf="@id/editText2"
-        app:layout_constraintTop_toBottomOf="@id/editText2"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:text="0"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calories"
+        app:layout_constraintEnd_toEndOf="@+id/nextMeal_text"
+        app:layout_constraintStart_toStartOf="@+id/nextMeal_text"
+        app:layout_constraintTop_toTopOf="@+id/calories" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/water"
@@ -136,13 +138,14 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
+        android:id="@+id/water_text"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:inputType="time"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@id/water"
-        app:layout_constraintEnd_toEndOf="@id/editText3"
-        app:layout_constraintStart_toStartOf="@id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/nextMeal_text"
+        app:layout_constraintStart_toStartOf="@+id/nextMeal_text"
         app:layout_constraintTop_toTopOf="@id/water"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -175,6 +178,8 @@
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
