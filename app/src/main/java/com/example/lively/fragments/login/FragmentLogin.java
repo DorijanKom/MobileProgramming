@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.lively.MainActivity;
 import com.example.lively.R;
 import com.example.lively.database.LivelyDatabase;
 import com.example.lively.database.dao.usersDAO;
@@ -64,8 +65,8 @@ public class FragmentLogin extends Fragment {
                     Users users = usersDao.login(username, password);
                     if (users == null) {
                         Toast.makeText(getContext(), "Invalid password or username!", Toast.LENGTH_SHORT).show();
-                        btnLogin.setEnabled(false);
                     } else {
+                        ((MainActivity) getActivity()).user = users;
                         getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new DashboardFragment()).commit();
                     }
 
