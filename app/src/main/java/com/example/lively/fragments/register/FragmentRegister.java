@@ -36,8 +36,8 @@ public class FragmentRegister extends Fragment {
         etUserName = view.findViewById(R.id.etUserName);
         etPassword = view.findViewById(R.id.etPassword);
         etEmail = view.findViewById(R.id.etEmail);
-        btnRegister.findViewById(R.id.btnRegister);
-        btnLogin.findViewById(R.id.btnLogin);
+        btnRegister=view.findViewById(R.id.btnRegister);
+        btnLogin=view.findViewById(R.id.btnLogin);
 
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +53,10 @@ public class FragmentRegister extends Fragment {
                 if (username.isEmpty() && password.isEmpty()) {
                     Toast.makeText(getContext(), "Fill in the required fields!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Users users = new Users(etUserName.getText().toString(), etPassword.getText().toString(), email = etEmail.getText().toString());
+                    Users users = new Users(etUserName.getText().toString(), etEmail.getText().toString(), etPassword.getText().toString());
                     LivelyDatabase.getDatabase(getContext()).usersDAO().addUsers(users);
-                    Toast.makeText(getContext(), "Registered", Toast.LENGTH_SHORT).show();
                     ((MainActivity) getActivity()).user = users;
-
-
+                    getParentFragmentManager().beginTransaction().replace(R.id.frag_container_view, new UserDataFragment()).commit();
                 }
             }
 

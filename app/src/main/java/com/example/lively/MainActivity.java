@@ -16,13 +16,14 @@ import com.example.lively.fragments.exercise.ExerciseFragment;
 import com.example.lively.fragments.food.FoodFragment;
 import com.example.lively.fragments.ViewPageAdapter;
 import com.example.lively.fragments.home.HomeFragment;
+import com.example.lively.fragments.login.FragmentLogin;
 import com.example.lively.fragments.sleep.SleepFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
     FragmentContainerView fragmentContainerView;
-    public Users user = new Users("Dorijan","dorijan.komsic@gmail.com","12345");
+    public Users user; //= new Users("Dorijan","dorijan.komsic@gmail.com","12345");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentContainerView = findViewById(R.id.frag_container_view);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container_view,
-                new HomeFragment()).commit();
+                new FragmentLogin()).commit();
 
     }
 

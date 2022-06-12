@@ -18,7 +18,7 @@ public interface usersDAO {
     @Query("SELECT * FROM users WHERE Userid=:id")
     public Users getUsersBYID(long id);
 
-    @Insert()
+    @Insert
     public void addUsers(Users users);
 
     @Update
