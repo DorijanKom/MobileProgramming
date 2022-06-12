@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.lively.database.tables.Users;
 import com.example.lively.fragments.dashboard.DashboardFragment;
 import com.example.lively.fragments.exercise.ExerciseFragment;
 import com.example.lively.fragments.food.FoodFragment;
@@ -21,7 +22,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     FragmentContainerView fragmentContainerView;
-    public long userID=4;
+    public Users user = new Users("Dorijan","dorijan.komsic@gmail.com","12345");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
